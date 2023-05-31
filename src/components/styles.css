@@ -1,0 +1,87 @@
+/* styles.css */
+
+/* FileUploader component */
+.uploader-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.uploader-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.uploader-progress {
+  width: 100%;
+}
+
+.uploader-input {
+  margin-top: 20px;
+}
+
+.uploader-button {
+  margin-top: 10px;
+}
+
+/* OcrResults component */
+.ocr-results-container {
+  padding: 20px;
+}
+
+.ocr-results-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ocr-result-item {
+  margin-bottom: 20px;
+}
+
+.ocr-result-checkbox {
+  margin-right: 10px;
+}
+
+.ocr-result-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ocr-result-text {
+  white-space: pre-wrap;
+}
+
+/* styles.css */
+
+/* ...existing styles... */
+
+.ocr-result-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.ocr-result-item:hover {
+  background-color: #f5f5f5;
+}
+
+.selected {
+  background-color: #eaf2ff;
+}
+
+.ocr-results-save-button {
+  margin-top: 10px;
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ocr-results-save-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

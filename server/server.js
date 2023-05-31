@@ -4,6 +4,7 @@ const { Storage } = require("@google-cloud/storage");
 const multer = require("multer"); // for handling multipart/form-data, which is used for file upload
 const cors = require("cors");
 require("dotenv").config();
+const fs = require("fs");
 
 const app = express();
 app.use(cors());
@@ -24,6 +25,13 @@ app.get("/buckets", async (req, res) => {
 });
 
 const upload = multer({ dest: "uploads/" }); // multer configuration
+
+// Add an endpoint that accepts file uploads
+app.post("/upload", upload.array("files"), (req, res) => {
+  // req.files is array of `files` files
+  // req.body will contain the text fields, if there were any
+  res.send("Files uploaded successfully.");
+});
 
 app.post("/upload-and-process-ocr", upload.single("file"), async (req, res) => {
   var bucketName = "testmaker-bucket";
